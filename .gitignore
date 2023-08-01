@@ -3,7 +3,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/react-complete-guide-code-06-styling/node_modules
+/08-practice-project/*/node_modules
 code/node_modules
 /.pnp
 .pnp.js
