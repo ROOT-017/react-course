@@ -4,6 +4,7 @@
 
 # dependencies
 /01-starting-project/node_modules
+code/node_modules
 /.pnp
 .pnp.js
 
