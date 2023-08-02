@@ -3,15 +3,12 @@ import React, { useState } from "react";
 import UserForm from "./components/UserForm";
 import style from "./App.module.css";
 import UserItem from "./components/UserItem";
-import Overley from "./components/overley/Overley";
+import Overley from "./components/ui/overley/Overley";
 
 function App() {
-  const [overley, setOverly] = useState(false);
   const [users, setUsers] = useState([]);
+  const [err, setErr] = useState();
 
-  if (overley) {
-    return <Overley setOverly={setOverly} />;
-  }
   const deleteHandler = (id) => {
     setUsers((prevUsers) => {
       const users = prevUsers.filter((user) => user.id !== id);
@@ -19,9 +16,23 @@ function App() {
     });
   };
 
+  const cancelOverly = (e) => {
+    e.stopPropagation();
+    setErr();
+  };
   return (
     <div className={style["container"]}>
-      <UserForm setOverly={setOverly} setUsers={setUsers} users={users} />
+      {err && (
+        <Overley
+          message={err.message}
+          errType={err.errType}
+          directive={err.directive}
+          setErr={setErr}
+          onConfrim={cancelOverly}
+        />
+      )}
+      <UserForm setErr={setErr} setUsers={setUsers} users={users} />
+
       <div className={style["user-list"]}>
         {users.length > 0
           ? users.map((user) => (

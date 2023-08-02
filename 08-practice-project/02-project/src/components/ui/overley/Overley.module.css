@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(19, 18, 18, 0.587);
+  background-color: rgba(0, 0, 0, 0.402);
 }
 
 .overley__content {
@@ -21,22 +21,15 @@
   background-color: blueviolet;
   padding: 1em;
   color: white;
-  font-weight:bold ;
+  font-weight: bold;
 }
 
 .overley__body {
   padding: 1em;
 }
 
-.overley__button {
+.overley__footer {
   display: flex;
   justify-content: right;
 }
 
-.overley__button button {
-  border: none;
-  background-color: blueviolet;
-  color: white;
-  padding: 8px;
-  border-radius: 4px;
-}
