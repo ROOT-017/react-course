@@ -1,0 +1,7 @@
+.user-item {
+  height: fit-content;
+  width: 32em;
+  padding: 2em;
+  border-radius: 4px;
+  background: #f1f1f1;
+}
