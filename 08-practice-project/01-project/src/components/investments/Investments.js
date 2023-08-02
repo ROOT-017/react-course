@@ -3,7 +3,6 @@ import styles from "./Investment.module.css";
 import InvestmentItem from "./InvestmentItem";
 
 const Investment = (props) => {
-
   if (props.yearlyData.length < 1)
     return <p className={styles["not_investment"]}> Add Investment above</p>;
 
@@ -18,13 +17,15 @@ const Investment = (props) => {
           <th>Invested Capital</th>
         </tr>
       </thead>
-      {props.yearlyData.map((data) => (
-        <InvestmentItem
-          item={data}
-          initialInvestment={props.initialInvestment}
-          key={data.year}
-        />
-      ))}
+      <tbody>
+        {props.yearlyData.map((data) => (
+          <InvestmentItem
+            item={data}
+            initialInvestment={props.initialInvestment}
+            key={data.year}
+          />
+        ))}
+      </tbody>
     </table>
   );
 };

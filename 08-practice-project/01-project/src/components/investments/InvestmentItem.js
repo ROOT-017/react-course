@@ -6,7 +6,6 @@ const InvestmentItem = (props) => {
     maximumFractionDigits: 2,
   });
   return (
-    <tbody>
       <tr>
         <td>{props.item.year}</td>
         <td>{formater.format(props.item.savingsEndOfYear)}</td>
@@ -25,7 +24,6 @@ const InvestmentItem = (props) => {
           )}
         </td>
       </tr>
-    </tbody>
   );
 };
 
