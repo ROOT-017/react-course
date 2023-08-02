@@ -3,7 +3,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/08-practice-project/*/node_modules
+*/node_modules
 code/node_modules
 /.pnp
 .pnp.js
@@ -24,4 +24,3 @@ code/node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-/node_modules
